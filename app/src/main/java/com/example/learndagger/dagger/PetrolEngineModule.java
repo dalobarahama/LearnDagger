@@ -1,4 +1,7 @@
-package com.example.learndagger;
+package com.example.learndagger.dagger;
+
+import com.example.learndagger.car.Engine;
+import com.example.learndagger.car.PetrolEngine;
 
 import dagger.Binds;
 import dagger.Module;

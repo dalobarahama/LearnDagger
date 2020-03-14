@@ -1,4 +1,8 @@
-package com.example.learndagger;
+package com.example.learndagger.dagger;
+
+import com.example.learndagger.car.Rims;
+import com.example.learndagger.car.Tires;
+import com.example.learndagger.car.Wheels;
 
 import dagger.Module;
 import dagger.Provides;
@@ -8,7 +12,7 @@ import dagger.Provides;
  */
 
 @Module
-public class WheelsModule {
+public abstract class WheelsModule {
 
     @Provides
     static Rims provideRims() {
