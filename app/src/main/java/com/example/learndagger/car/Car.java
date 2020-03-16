@@ -2,19 +2,24 @@ package com.example.learndagger.car;
 
 import android.util.Log;
 
+import com.example.learndagger.dagger.PerActivity;
+
 import javax.inject.Inject;
 
 /**
  * Created by pengalatdite on 3/13/2020.
  */
+@PerActivity
 public class Car {
     private static final String TAG = "Car";
 
+    private Driver driver;
     private Engine engine;
     private Wheels wheels;
 
     @Inject
-    public Car(Engine engine, Wheels wheels) {
+    public Car(Driver driver, Engine engine, Wheels wheels) {
+        this.driver = driver;
         this.engine = engine;
         this.wheels = wheels;
     }
@@ -26,6 +31,6 @@ public class Car {
 
     public void drive() {
         engine.start();
-        Log.d(TAG, "driving...");
+        Log.d(TAG, driver + " drive " + this);
     }
 }

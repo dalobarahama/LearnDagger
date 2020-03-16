@@ -14,8 +14,8 @@ import dagger.Provides;
 public class DieselEngineModule {
     private int horsePower;
 
-    public DieselEngineModule(int horsePowere) {
-        this.horsePower = horsePowere;
+    public DieselEngineModule(int horsePower) {
+        this.horsePower = horsePower;
     }
 
     @Provides
